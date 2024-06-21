@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Cloud Storage 파일 업로드 및 그래프</title>
+    <!-- Chart.js 및 JSZip 라이브러리 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <!-- Google Maps API 및 MarkerClusterer 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/heic2any/dist/heic2any.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz2CZvDe4dViR8sxKPoTG-mNOUu6-AMeY&libraries=places"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+</head>
+<body>
+    <main>
+      <div id="clickarrow"onclick="leftThing()">
+        <span id="arrow">✔️ 나의 주소 추가하기</span>
+    </div>
+ 
+      <div id="file-list"></div>
+
+        <div id="leftThing" > 
+          <br>
+          <div class="flex2">
+          <div id="profileName"></div>
+        </div>
+        <div class="flex2">
+        <div id="profileWarning"></div>
+      </div>
+            <div class="flex2">
+              <button id="addschool" onclick="addschool()">주소 찾기</button>
+            </div>
+            <div class="flex2">
+            <div id="line"></div>
+          </div>
+            <div class="flex2">
+              <h1 id="otherDatapi">다른 데이터파이 둘러보기</h1>
+            </div>
+            <div id="folder">
+              <div class="flex2">
+            <div id="folderZip">
+            </div>
+            </div>
+            <div id="addFolderDisplay">
+
+              <div class="flex">
+                <div id="add">
+              <h1>주소 추가하기</h1>
+              <div id="x" onclick="closedWindow()"><h1>x</h1></div>
+              </div>
+            </div>
+              <form id="info-form">
+    
+              
+                <div class="flex">
+
+                      <input id="address" type="text" placeholder="주소를 입력해주세요!" />
+    
+                      <button type="button" id="fixbutton" onclick="fixBtn()">검색</button>
+                      
+                  
+                  </div>
+                  <div id="addressDisplay"></div>
+                  <div id="info-form-zip">
+                  <div id="info-form-hidden">
+                <!-- <div id="info-form-flex"> -->
+                  
+                
+              <div class="flex3">
+                <div id="suggestions" class="suggestions"></div>
+              </div>
+              <h4 id="h4">프로필 등록하기</h4>
+              <div class="flex-align">
+                <div id="photoZip">
+                 
+                <label id="photolabel" for="photo">
+                  <img id="previewPhoto" />
+                  </label>
+                <input type="file" id="photo" name="photo"onchange="readURLPhoto(this);" ><br><br>
+              </div>
+              <div id="display-block">
+                <div class="flex10">
+                  <div id="logoZip">
+                   
+                    <br>
+                   
+                    <label id="logolabel" for="logo">
+                      <img id="preview" />
+                    </label>
+                    <input type="file" id="logo" name="logo"onchange="readURL(this);" ><br><br>
+                </div>
+              </div>
+                  <div class="flex">
+                    <div id="display-block">
+                    <label for="label" id="displayName"><br></label>
+                    <input type="text" id="label" name="label" placeholder="학교_팀이름을 입력해주세요.">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+                <!-- </div> -->
+                <div class="flex">
+                  <button type="button" id="submit-btn" onclick="closedWindow()">등록</button>
+                </div>
+              </div>
+              </div>
+                </form>
+    
+          
+        </div>
+          </div>
+
+           
+          <div id="ifinfomation">
+            
+          </div>
+          
+            <div id="secondwindow">
+              <div class="flex">
+              <div class="flex4">
+              <div id="headText">데이터 파이 조회</div>
+              <div id="x" onclick="closedLeftArrow()">x</div>
+              </div>
+            </div>
+              <div class="flex">
+              <div id="headList">
+              <div id="placeImg"></div>
+              <div id="headText">
+                <div id="secondwindowLogo"></div>
+                <div class="flex-margin0">
+                  <div id="secondwindowHead"></div>
+              
+                 </div>
+                <div id="secondwindowAddress"></div>
+                <div id="secondwindowTotal"></div>
+              </div>
+            </div>
+            </div>
+            <hr>
+
+            <div class="flex">
+              <div id="textBetween">
+            <h1 id="headText2">등록한 데이터</h1>
+            <div id="recordUploadsZip">
+              <input id="recordUploads" type="file">
+              <label id="recordLabel" for="recordUploads">등록 +</label>
+            </div>
+          </div>
+            </div>
+            <div class="flexRecord">
+            <div id="secondwindowRecord"></div>
+            </div>
+            </div>
+            
+
+            
+          
+            
+               
+
+            </div>
+            
+               
+           
+       
+   
+        <div id="addwindow">
+        </div>
+            </div>
+            <div class="blur">
+                <div id="map"></div>     
+            </div>
+
+            <div id="right_info">
+                
+            </div>         
+            </div>    
+        </div>
+      </div>
+    </div>
+         
+    <div id="loginPlz">
+        <div id="loginWindow">
+          <h3>참여 그룹에 속해있지 않습니다.</h3>
+          <div class="flex">
+          <button id="loginOkButton" onclick="closedLoginWindow()">확인</button>
+          </div>
+        </div>
+    </div>
+    </main>
+    <!-- Firebase 초기화 스크립트 --> 
+  <script src="./index.js"></script>
+</body>
+</html>

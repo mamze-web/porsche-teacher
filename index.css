@@ -1,0 +1,771 @@
+
+  main{
+    font-family: "Noto Sans KR", sans-serif;
+    max-width:1920px;
+    max-height:796px;
+    height:100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color:rgb(230,230,230);
+}
+
+#file-list{
+  color:white;
+}
+
+#address-details{
+  display: flex;
+}
+#preview{
+  width:150%;
+  height:auto;
+
+}
+.suggestions {
+  margin-top:10px;
+  font-family: 'Roboto', sans-serif;
+}
+input{
+  padding-left:20px;
+}
+h4{
+  margin:20px 0 20px 0;
+}
+
+.suggestion-item {
+  text-align: left;
+  height:28px;
+  padding:10px;
+  display: flex;
+  align-items: center;
+  width:394px;
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  margin:10px;
+  border-radius: 10px;
+
+}
+.suggestion-item-click{
+  background-color:rgba(37,86,246,0.4);
+  border:none;
+}
+
+.suggestion-item:hover {
+  background-color:rgba(37,86,246,0.4);
+}
+.flex2{
+  display: flex;
+  justify-content: center;
+
+  width:322px;
+}
+
+.flex3{
+  display: flex;
+  justify-content: center;
+  width:475px;
+}
+.flexRecord{
+  display: flex;
+  justify-content: center;
+  width:475px;
+  height:320px;
+  overflow: auto;
+}
+#photolabel{
+  width:100%;
+  height:230px;
+  overflow: hidden;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/microschool-gongdo.appspot.com/o/prod%2Fres%2FPorsche%20web%2Fimg%2Finstall.png?alt=media&token=6a808648-7124-43b7-8e0a-8231f8dced14');
+  background-size:100%;
+  background-position: 0;
+  background-repeat: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#photolabel:hover{
+  background-color:rgb(0,0,0,0.2);
+  
+}
+#photoZip{
+  width:30%;
+  height:230px;
+  border: 2px rgb(37,86,246) solid;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top:30px;
+  margin-right:10px;
+}
+#photoZip img{
+  width:cover;
+  height:200px;
+}
+#photoZip input[type="file"]{
+  
+  width:0;
+  height:0;
+  padding:0;
+  overflow: hidden;
+  border:0;
+}
+
+
+#profilePhoto{
+  width:120px;
+  height:120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin-top:40px;
+}
+#ifinfomation{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#h4{
+  color:rgb(37,86,246);
+  text-align: center;
+}
+#logolabel{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/microschool-gongdo.appspot.com/o/prod%2Fres%2FPorsche%20web%2Fimg%2Flogo.png?alt=media&token=4bddb753-3cbe-4689-acdb-c574f1ed9cd8');
+  background-size:100%;
+  background-position: 0;
+  background-repeat: none;
+}
+#logolabel:hover{
+  background-color:rgb(0,0,0,0.2);
+}
+#zip label{
+  margin:30px;
+  padding:20px;
+  vertical-align: middle;
+  border:1px solid black;
+  color:white;
+  width:40px;
+  height:40px;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#address-details{
+  position: absolute;
+  color:black;
+  display: block;
+  position: absolute;
+  margin-top:20px;
+}
+
+#address{
+  height:46px;
+  width:338px;
+  margin:10px 0px 10px 0px;
+  background-color: white;
+  border:2px rgb(37,86,246) solid;
+  border-radius:10px;
+  color:rgb(40,40,40);
+  font-size:20px;
+}
+
+#fixbutton{
+  height:48px;
+  border:none;
+  width:62px;
+  font-size:20px;
+  margin:10px 0px  10px 10px;
+  background-color:rgb(37,86,246);
+  color:white;
+  border-radius:10px;
+}
+#addressHidden{
+  display: none;
+  background: white;
+
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  justify-content: center;
+}
+#display-flex{
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
+#logoZip label{
+  background-color: white;
+  display: flex;
+  padding:20px;
+  vertical-align: middle;
+  height:50px;
+  width:50px;
+  text-align: center;
+  border:2px rgb(37,86,246) solid;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80px;
+}
+#add{
+  display: flex;
+  justify-content: space-between;
+  width:420px;
+  color:rgb(37,86,246);
+}
+.flex10{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+.flex{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+.flex-margin0{
+  display: flex;
+  width:100%;
+  justify-content: left;
+  align-items: center;
+  margin:0;
+}
+.flex4{
+  display: flex;
+  width:80%;
+  margin-top:20px;
+  justify-content: space-between;
+  padding-top:20px;
+  font-weight: bold;
+}
+#textBetween{
+  display: flex;
+  justify-content: space-between;
+  width:350px;
+  align-items: center;
+  margin-top:0;
+}
+#addRecord{
+  background-color:rgb(37,86,246);
+  color:white;
+  border:none;
+  height:40px;
+  width:60px;
+  border-radius: 10px;
+  font-size:15px;
+
+}
+#submit-btn{
+  background-color:rgb(37,86,246);
+  display: flex;
+align-items: center;
+justify-content: center;
+  color:white;
+  border:none;
+  margin-top:20px;
+  width:420px;
+  height:48px;
+  font-size:20px;
+  border-radius:10px;
+}
+#logoZip input[type="file"]{
+  
+  width:0;
+  height:0;
+  padding:0;
+  overflow: hidden;
+  border:0;
+}
+
+#logoZip{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:135px;
+  margin-top:50px;
+}
+#addressDisplay{
+  background-color:white;
+  margin: 0px 5px;
+}
+.labelPhoto{
+  width:40px;
+  margin:0;
+  padding:0;
+}
+#zip input[type="file"]{
+  position: absolute;
+  width:0;
+  height:0;
+  padding:0;
+  overflow:hidden;
+  border:0;
+
+}
+
+#addFolderDisplay{
+  z-index:4;
+  width:475px;
+  height:145px;
+  position: absolute;
+  top:0%;
+  border-radius: 20px;
+  left:105%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  background-color:rgb(246,248,255);
+
+}
+#displayName{
+  color:rgb(37,86,246);
+}
+#label{
+  font-size:15px;
+  font-weight: bold;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height:48px;
+  width:200px;
+  border:2px rgb(37,86,246) solid;
+  border-radius:10px;
+}
+#info-form{
+  text-align: center;
+  margin:0;
+  padding:0;
+
+}
+#info-form-hidden{
+  display: none;
+  width:475px;
+  
+}
+#loginPlz{
+  max-width: 1920px;
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:rgb(0,0,0,0.4);
+  z-index: 5;
+  max-height:796px;
+  height:100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#loginWindow{
+  position: absolute;
+  background-color:rgb(246,248,255);
+  justify-content: center;
+  padding:30px;
+  border-radius: 10px;
+}
+#loginWindow button{
+  border: none;
+  background-color: rgb(37,86,246);
+  color:white;
+  width:60px;
+  height:30px;
+  font-size:15px;
+  font-weight: bold;
+}
+#info-form-zip{
+ display: flex;
+ justify-content: center;
+}
+.info-form-block{
+  display: block !important;
+  justify-content: center;
+}
+#info-form-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.addFolderDisplay-click{
+  height:710px !important;
+
+}
+
+#zip{
+  width:700px;
+  height:40%;
+  position: absolute;
+  bottom:30%;
+  background-color:white;
+}
+
+#addwindow{
+  position:fixed;
+  width:80%;
+  height:100px;
+ background-color:white;
+}
+
+#addwindow{
+  z-index: 0;
+  display: block;
+  width:30%;
+  left:105%;
+  height:98%;
+  top:0;
+  position:absolute;
+  background-color:black;
+}
+#line{
+  width:282px;
+  border-top:2px rgb(37,86,246) solid;
+}
+hr{
+  color:rgba(204, 199, 199, 0.6);
+  margin:20px 10% 0 10%;
+}
+#leftThing{
+  z-index: 1;
+text-align: right;
+  font-size:20px;
+  width:322px;
+  height:723px;
+  background-color:rgb(246,248,255);
+  position:absolute;
+  color:black;
+  top:5%;
+  left:-36%;
+  transition:0.5s;
+  border-radius: 16px;
+}
+
+.leftThing-click{
+  left:2% !important;
+  transition:0.5s;
+  ~.blur{
+    filter:blur(3px);
+    transition:0.5s;
+  }
+}
+
+.blur{
+  width:100%;
+  transition:0.5s;
+  
+}
+.bigblur{
+  transition:0.5s;
+  width:100%;
+  z-index: inher
+}
+
+#previewGraph{
+  width:300px;
+  height:168.75px;
+
+}
+.graph-div{
+  background-color:white;
+  border:none;
+}
+.right_info_moved{
+  background-color:white;
+}
+.leftwow{
+  width:10%;
+}
+#secondwindow img{
+  width:cover;
+  height:100%;
+}
+
+h1{
+  font-size:25px;
+}
+#secondwindow{
+  text-align: center;
+  color:rgb(37,86,246);
+  width: 475px;
+  height:724px;
+  position: absolute;
+  background-color:rgb(246,248,255);
+  display: none;
+  left:120%;
+  top:0;
+  border-radius: 10px;
+  justify-content: center;
+
+}
+#leftarrow{
+  color:rgb(37,86,246);
+  position:absolute;
+  top:50%;
+  left:2%;
+}
+#headList{
+  display: flex;
+  width: 90%;
+  height:200px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20px;
+  margin-bottom:0px;
+
+}
+#headList img{
+  width:100%;
+  height:auto;
+}
+#headText{
+  text-align: left;
+  width:100%;
+}
+#placeImg{
+  width:200px;
+  height:180px;
+  border:2px rgb(37,86,246) solid;
+  margin:50px 30px 50px 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#placeImg img{
+  width:auto;
+  height:180px;
+}
+#secondwindowLogo{
+  width:50px;
+  height:50px;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border:2px rgb(37,86,246) solid;
+  overflow: hidden;
+}
+.secondwindow-click{
+  opacity: 1 !important;
+  visibility:visible !important;
+}
+#secondwindowRecord{
+  width:350px;
+  height:200px;
+  list-style-type: none;
+
+}
+#secondwindowRecord button{
+  font-size:10px;
+}
+#dnBtn{
+  width:200%;
+  height:48px;
+  font-size:10px;
+  padding:5px 10px;
+  margin:5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color:rgb(37,86,246);
+  color:white;
+}
+#secondwindowRecord li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+  color:rgb(37,86,246);
+  border:none;
+  background-color:white;
+  text-align: left;
+  width:310px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height:0px;
+  font-size:15px;
+  margin:5px 0;
+}
+#secondwindowRecord button{
+  background-color:rgb(37,86,246);
+  border:none;
+  color:white;
+  width:70px;
+  height:25px;
+  border-radius: 10px;
+  
+}
+hr{
+  border:1px rgb(37,86,246) solid
+}
+
+#folder{
+  display: flex;
+  justify-content: center;
+  margin-top:30px;
+}
+#rightThing{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+}
+#openwindow{
+  text-align: center;
+  justify-content: center;
+  margin-top:80px;
+}
+#searchimg{
+  width:20px;
+  height:20px;
+  margin-left:2%;
+}
+#searchzip{
+  display: flex;
+  margin:40px 40px 10px 40px;
+}
+#search{
+  background-color:transparent;
+  border:none;
+  margin-left:3%;
+  font-size:20px;
+}
+#search:active{
+  border:none;
+}
+#clickarrow{
+  margin:20px;
+  left:0;
+  top:0;
+  background-color:rgb(37,86,246);
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:246px;
+  height:48px;
+  border-radius: 6px;
+  color:black;
+  border-radius: 15px;
+  z-index:9;
+  position:absolute;
+
+}
+#arrow{
+  color:white;
+  font-size: 13px;
+  margin-right:10px;
+}
+
+#addschool{
+  background-color:rgb(37,86,246);
+  border: none;
+  width:246px;
+  height:48px;
+  border-radius: 10px;
+  font-size:25px;
+  color: white;
+  font-weight: bold;
+  margin:50px 0 30px 0;
+}
+#addschool:hover{
+  background-color:rgb(27,76,236);
+}
+#otherDatapi{
+
+  width:300px;
+  text-align: center;
+}
+#folder-list{
+  padding:0;
+}
+#folderZip{
+  overflow: auto;
+  width:292px;
+  height:420px;
+  border-radius: 10px;
+
+}
+#recordUploadsZip input[type="file"] {
+  display: none;
+}
+
+#recordUploadsZip{
+  width:68px;
+}
+#recordUploadsZip label{
+  background-color:rgb(37,86,246);
+  color:white;
+  width:68px;
+  padding:10px 13px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#folderZip li{
+  height:59px;
+  border-radius: 10px;
+    border:2px rgb(37,86,246) solid;
+  display: flex;
+  align-items: center;
+  margin:7px 0px;
+  justify-content: space-between;
+  color:rgb(37,86,246);
+  padding:0px 20px;
+  list-style: none;
+}
+#folderZip li div img{
+  width:35px;
+  height:auto;
+}
+
+::-webkit-scrollbar{ 
+  display: none;
+}
+::-webkit-scrollbar-track{
+  background-color:transparent;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#F3E5AB;
+  border-radius: 10px;
+}
+a{
+  text-decoration-line:none;
+  transition:0.2s;
+  color:white;
+}
+a:hover{
+  color:blue;
+  transition:0.2s
+}
+.honeycomb{
+  margin-left:20px;
+  width:100px;
+  margin-right:20px;
+}
+#honeycombtext{
+  align-items: center;
+  font-size:1.5vw;
+  font-weight: bold;
+  text-align: right;
+  display: flex;
+  position:absolute;
+  bottom:20px;
+  left:0;
+}
+
+#map{
+  width:100%;
+  height:100%;
+  background-color:white;
+}
